@@ -1,0 +1,20 @@
+<div class="container">
+  <form>
+    <div class="mb-3 form-control">
+      <label for="exampleInputEmail1" class="form-label">Tytuł filmu</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="tytul" [(ngModel)]="tytul"/>
+    </div>
+    <div class="mb-3 form-control">
+      <label for="exampleInputPassword1" class="form-label">Rodzaj</label>
+      <select class="form-select" name="selekt" [(ngModel)]="selekt">
+        <option></option>
+        <option value="1">Komedia</option>
+        <option value="2">Obyczajowy</option>
+        <option value="3">Sensacyjny</option>
+        <option value="4">Horror</option>
+      </select>
+    </div>
+  
+    <button type="submit" (click)="wyslij()" class="btn btn-primary">Dodaj</button>
+  </form>
+</div>

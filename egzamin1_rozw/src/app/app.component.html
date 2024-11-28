@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Liczba kursów: {{liczba}}</h2>
+  <ol class="list-group list-group-numbered">
+    @for(item of tab;  track item){
+      <li class="list-group-item">{{item}}</li>
+    }
+  </ol>
+
+  <form>
+    <p>Imię i nazwisko: </p>
+    <div class="form-group">
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name"/>
+    </div>
+    <p>Numer kursu: </p>
+    <div class="form-group">
+      <input type="text" class="form-control" id="number" name="numerkursu" [(ngModel)]="numerkursu"/>
+    </div>
+  </form>
+
+  <button type="button" (click)="wyslij()" class="btn btn-success">Zapisz się do kursu</button>
+</div>
+
